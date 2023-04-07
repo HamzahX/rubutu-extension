@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Rubutu",
+  "version": "1.0",
+  "description": "Replace English short-hands for Hausa letters in text inputs.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["src/background/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"]
+    }
+  ],
+  "permissions": ["activeTab"],
+  "options_page": "src/options/options.html",
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Rubutu"
+  }
+}
